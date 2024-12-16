@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stimmzettel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 700px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #444;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #333;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .circle.selected {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stimmzettel</h1>
+        <table>
+            <tr>
+                <th>Liste Nr.</th>
+                <th>Partei</th>
+                <th>Bezeichnung</th>
+                <th>Wählen</th>
+            </tr>
+            <tr>
+                <td>1</td><td>SPÖ</td><td>Sozialdemokratische Partei Österreichs</td>
+                <td><div class="circle" onclick="submitVote(1)"></div></td>
+            </tr>
+            <tr>
+                <td>2</td><td>ÖVP</td><td>Liste Sebastian Kurz - Die neue Volkspartei</td>
+                <td><div class="circle" onclick="submitVote(2)"></div></td>
+            </tr>
+            <tr>
+                <td>3</td><td>FPÖ</td><td>Freiheitliche Partei Österreichs</td>
+                <td><div class="circle" onclick="submitVote(3)"></div></td>
+            </tr>
+            <tr>
+                <td>4</td><td>GRÜNE</td><td>Die Grünen - Die Grüne Alternative</td>
+                <td><div class="circle" onclick="submitVote(4)"></div></td>
+            </tr>
+            <tr>
+                <td>5</td><td>NEOS</td><td>Das Neue Österreich</td>
+                <td><div class="circle" onclick="submitVote(5)"></div></td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
